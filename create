@@ -1,0 +1,15 @@
+<?php
+mysql_connect("localhost","-u root"," ");
+
+mysql_query("drop database if exists information;");
+mysql_query("create database information;");
+mysql_query("use information;");
+mysql_query("create table information (id int not null auto_increment primary key, 
+	 name char(30), surname char(30), fathersname char(30), age int, 
+	 birthday date, sex char (1));");
+mysql_query("insert into information (name,surname,fathersname,age,birthday,sex) 
+	values ('Maxim', 'Khomenko','Olegovich',19,'1994-09-19','m');");
+mysql_query("insert into information (name,surname,fathersname,age,birthday,sex) 
+	values ('Igor', 'Fedorishin','Evgenievich',20,'1994-03-30','m');");
+echo "Ok.";
+?>
